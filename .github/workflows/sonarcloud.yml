@@ -26,7 +26,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Token de SonarCloud
           GITHUB_TOKEN: ${{ github.token }}  # Token automático de GitHub
          with:
-      args: >
-        -Dsonar.projectKey=Repositorio-Proyecto-Frumusa
-        -Dsonar.organization=Kevinduran09
-        -Dsonar.branch.name=main
+        args: >
+          -Dsonar.projectKey=Repositorio-Proyecto-Frumusa
+          -Dsonar.organization=Kevinduran09
+          -Dsonar.branch.name=main
