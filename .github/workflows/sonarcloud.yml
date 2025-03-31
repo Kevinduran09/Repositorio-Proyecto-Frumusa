@@ -27,6 +27,6 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}  # Token automático de GitHub
         with:
           args: >
-            -Dsonar.projectKey=Repositorio-Proyecto-Frumusa
+            -Dsonar.projectKey=Kevinduran09_Repositorio-Proyecto-Frumusa
             -Dsonar.organization=Kevinduran09
             -Dsonar.branch.name=main
