@@ -1,26 +1,27 @@
 name: SonarCloud Analysis
 on:
   push:
-    branches: [ main ]  # Analiza al hacer push a "main"
+    branches: [ main ]
   pull_request:
-    types: [ opened, synchronize ]  # Analiza en PRs
+    types: [ opened, synchronize ]
 
 jobs:
-  build:
+  analyze:
+    name: SonarCloud Scan
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      
+      - uses: actions/checkout@v4  # Versión actualizada
+
       # Configura Java (requerido para SonarScanner)
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           java-version: 17
           distribution: 'temurin'
-      
-      # Ejecuta SonarCloud Analysis
+
+      # 👇 Acción actualizada (reemplazo directo)
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
+        uses: sonarsource/sonarqube-scan-action@master
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Token de SonarCloud
+          GITHUB_TOKEN: ${{ github.token }}  # Token automático de GitHub
