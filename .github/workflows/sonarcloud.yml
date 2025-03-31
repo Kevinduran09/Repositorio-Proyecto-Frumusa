@@ -30,3 +30,8 @@ jobs:
             -Dsonar.projectKey=Kevinduran09_Repositorio-Proyecto-Frumusa
             -Dsonar.organization=Kevinduran09
             -Dsonar.branch.name=main
+            -Dsonar.qualitygate.wait=true  # Espera el resultado del Quality Gate
+            -Dsonar.scm.provider=git
+            -Dsonar.sourceEncoding=UTF-8
+            -Dsonar.sources=sql,js,css
+            -Dsonar.sql.dialect=oracle
