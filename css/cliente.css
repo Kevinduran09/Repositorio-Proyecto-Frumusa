@@ -1,0 +1,125 @@
+#R3243954094881130 {
+    width: 650px !important;
+    height: 850px !important;
+    padding: 20px;
+    background-image: url(#APP_FILES#FondoRegistroCliente.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.ui-dialog-titlebar {
+    text-align: center;
+}
+
+.ui-dialog-title {
+    display: inline-block;
+    margin: 0;
+}
+
+
+
+
+
+.t-Region-body header {
+    display: none;
+}
+
+
+#BtnRegistrate {
+    background-color: #3f9c51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    left: -100px;
+}
+
+.t-Login-logo {
+    display: none;
+}
+
+#BtnRegistrate:hover {
+    background-color: #2c662d;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#BtnRegistrate:active {
+    background-color: #2c662d;
+    box-shadow: none;
+}
+
+
+/* Estilo para el campo de texto */
+input[type="text"].text_field,
+input[type="tel"].text_field,
+input[type="email"].text_field,
+input[type="text"].number_field,
+input[type="password"].password {
+    border: none;
+    border-bottom: 2px solid #2c662d;
+    width: 70%;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center !important;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #414141;
+    position: relative;
+}
+
+
+
+
+.input-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transition: 0.2s ease all;
+    pointer-events: none;
+    color: #999;
+}
+
+
+#P2NOMBRECOMPLETO_CONTAINER,
+#P2NUMEROIDENTIFICACION_CONTAINER,
+#P2RESIDENCIA_CONTAINER,
+#P2TELEFONO_CONTAINER,
+#P2CORREOELECTRONICO_CONTAINER,
+#P2CONTRASENA_CONTAINER {
+    margin: 0 auto;
+    width: 400px;
+
+}
+
+
+#P2TIPOCLIENTE_CONTAINER {
+    height: 82px;
+    width: 278px;
+    margin: 0 auto;
+}
+
+
+
+
+
+#P2NOMBRECOMPLETO_LABEL,
+#P2NUMEROIDENTIFICACION_LABEL,
+#P2RESIDENCIA_LABEL,
+#P2TELEFONO_LABEL,
+#P2CORREOELECTRONICO_LABEL,
+#P2CONTRASENA_LABEL {
+    text-align: center;
+    display: block;
+    width: 104%;
+
+}

@@ -1,0 +1,23 @@
+.t-Region-body header {
+    display: none;
+}
+
+
+#col col-6 apex-col-auto col-start {
+    background-color: yellow;
+}
+
+
+#P10_NEW_UNIDAD_DISPLAY {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+}
+
+
+#P10_NEW_2CODIGO_DISPLAY,
+#P10_NEW_1NOMBRE_DISPLAY,
+#P10_NEW_UNIDAD_DISPLAY,
+#P10_PRECIO_DISPLAY {
+    border: 1px solid #ccc;
+}

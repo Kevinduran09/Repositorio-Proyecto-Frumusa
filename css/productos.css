@@ -1,0 +1,170 @@
+.p3 {
+    padding: 1rem;
+}
+
+.custom-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #fff;
+    padding: 15px;
+    text-align: left;
+}
+
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+
+.t-CardsRegion--styleB .a-CardView-headerBody {
+    text-align: left;
+}
+
+.custom-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.custom-card .card-price {
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.custom-card .card-unidad {
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3f4140;
+}
+
+.a-CardView-badgeValue {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-top: 10px;
+
+}
+
+.a-CardView-media {
+    width: 100%;
+    /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 200px;
+    /* Ajusta esta altura según lo que necesites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Evita que la imagen sobresalga */
+}
+
+.a-CardView-mediaImg {
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: 100%;
+    /* Ocupa toda la altura */
+    object-fit: cover;
+    /* Ajusta la imagen para llenar el contenedor sin distorsión */
+}
+
+.custom-card .card-description {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.header-filter {
+    background-color: red;
+}
+
+.a-CardView-actions {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.buy-boton {
+    width: auto;
+    background-color: #28a745;
+    border: none;
+    padding: 1rem;
+    color: #fff;
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.buy-boton:hover {
+    background-color: #2a7d3d;
+
+}
+
+.Title section {
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.bar {
+    background-color: #2d9b3b;
+    /* Verde similar a la imagen */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 9999 !important;
+}
+
+.nav-items {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.dropdown-item:hover {
+    background-color: #2d9b3b;
+    color: white;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-search {
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+.btn-search:hover {
+    background-color: #ddd;
+}
+
+/* Para mostrar el menú en hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

@@ -1,0 +1,99 @@
+.t-Login-logo {
+    display: none;
+}
+
+#R2871228656683620 {
+    width: 650px !important;
+    height: 850px !important;
+    padding: 20px;
+    background-image: url(#APP_FILES#Fondo_Registro_Proveedor.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#Btn_Registro_Proveedor {
+    background-color: #CBC588;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+#Btn_Registro_Proveedor:hover {
+    background-color: #E4E195;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#Btn_Registro_Proveedor:active {
+    background-color: #CBC588;
+    box-shadow: none;
+}
+
+
+
+/* Estilo para el campo de texto */
+input[type="text"].text_field,
+input[type="text"].text_field,
+input[type="text"].text_field,
+input[type="text"].number_field,
+input[type="email"].text_field,
+input[type="textfield"].text_field {
+    border: none;
+    border-bottom: 2px solid #E4E195;
+    width: 50%;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center !important;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #414141;
+}
+
+.input-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transition: 0.2s ease all;
+    pointer-events: none;
+    color: #999;
+}
+
+#P4_NOMBRE_CONTAINER,
+#P4_NOMBRE_CONTACTO_CONTAINER,
+#P4_PAIS_CONTAINER,
+#P4_TELEFONO_CONTAINER,
+#P4_CORREOELECTRONICO_CONTAINER,
+#P4_DETALLE_PRODUCTOS_CONTAINER {
+    width: 370px;
+    margin: 0 auto;
+}
+
+#P4_NOMBRE_LABEL,
+#P4_NOMBRE_CONTACTO_LABEL,
+#P4_PAIS_LABEL,
+#P4_TELEFONO_LABEL,
+#P4_CORREOELECTRONICO_LABEL,
+#P4_DETALLE_PRODUCTOS_LABEL {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.iti__flag {
+    background-image: url("#APP_FILES#flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .iti__flag {
+        background-image: url("#APP_FILES#flags@2x.png");
+    }
+}

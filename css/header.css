@@ -1,0 +1,75 @@
+header {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+header nav ul li img {
+    width: 80px;
+    height: auto;
+    max-height: 80px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #339955;
+    font-size: 16px;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a:hover {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.t-Footer-apex {
+    display: none;
+}
+
+.t-Header {
+
+    display: none;
+}
+
+.header-button {
+    color: #339955;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.header-button:hover {
+    background-color: #f0f0f0;
+}
+

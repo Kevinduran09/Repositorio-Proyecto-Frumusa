@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.popup {
+    display: none;
+    /* Oculta la ventana emergente por defecto */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Fondo semi-transparente */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+/* Estilo para mostrar la ventana emergente */
+input:checked+.popup {
+    display: flex;
+    /* Muestra la ventana emergente cuando el input está checked */
+}
+
+.branch-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* Espacio entre los elementos en la fila */
+    padding: 40px;
+    height: auto;
+    /* Ajustar la altura automáticamente */
+    background-color: #236C3A;
+    gap: 20px;
+}
+
+.branch {
+    position: relative;
+    width: calc(50% - 20px);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: flex-start;
+    gap: 84px;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.branch-image {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.branch-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+.branch-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.branch-info p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+}
+
+.branch-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.branch-info ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.branch-info ul li i {
+    font-size: 20px;
+    background-color: #339955;
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+/*cuadrado inferior*/
+.branch::after {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 100px;
+    height: 100px;
+    background-color: #3a8557;
+    border-radius: 15px;
+    z-index: 0;
+    transform: rotate(45deg);
+    opacity: 0.5;
+}
+
+/* Animaciones de los iconos */
+.branch-info ul li.animacion1 {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.branch-info ul li.animacion1 a {
+    display: inline-flex;
+    transition: color 0.3s ease;
+}
+
+.branch-info ul li.animacion1 a:hover {
+    color: #f57c00;
+}
+
+.branch-info ul li.animacion1 i {
+    margin-right: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.branch-info ul li.animacion1 a:hover i {
+    transform: scale(1.2);
+    color: #f57c00;
+}

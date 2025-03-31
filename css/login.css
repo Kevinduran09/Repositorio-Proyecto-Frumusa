@@ -1,0 +1,102 @@
+#R3179816734934503 {
+    width: 650px !important;
+    height: 850px !important;
+    padding: 20px;
+    background-image: url(#APP_FILES#FondoRegistroCliente.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.t-Login-logo {
+    display: none;
+}
+
+#header {
+    display: none;
+}
+
+#BTN_Login {
+    background-color: #3f9c51;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+#BTN_Login:hover {
+    background-color: #2c662d;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+#BTN_Login:active {
+    background-color: #2c662d;
+    box-shadow: none;
+}
+
+/* Estilo para el campo de texto */
+input[type="text"].number_field,
+input[type="password"].password {
+    border: none;
+    border-bottom: 2px solid #3f9c51;
+    width: 50%;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center !important;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: #414141;
+}
+
+.input-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    transition: 0.2s ease all;
+    pointer-events: none;
+    color: #999;
+}
+
+#P5_CEDULA_CONTAINER,
+#P5_CONTRASENA_CONTAINER {
+    width: 370px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#P5_CEDULA_CONTAINER,
+#P5_CONTRASENA_CONTAINER {
+    display: block;
+    text-align: center;
+}
+
+#P5_REGISTRARSE_DISPLAY {
+    border: none !important;
+}
+
+#P5_REGISTRARSE_LABEL {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+}
+
+#P5_REGISTRARSE_CONTAINER {
+    display: block;
+    width: 370px;
+    margin: 0 auto;
+}
+
+.t-Button {
+    display: block;
+    width: 370px;
+    margin: 0 auto;
+}
