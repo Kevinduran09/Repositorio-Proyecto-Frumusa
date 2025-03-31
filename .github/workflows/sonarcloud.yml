@@ -28,7 +28,7 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=Kevinduran09_Repositorio-Proyecto-Frumusa
-            -Dsonar.organization=Kevinduran09
+            -Dsonar.organization=kevinduran09
             -Dsonar.branch.name=main
             -Dsonar.qualitygate.wait=true  # Espera el resultado del Quality Gate
             -Dsonar.scm.provider=git
