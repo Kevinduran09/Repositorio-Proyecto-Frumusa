@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'Default'  # Usa tu agente auto-hospedado
 
 variables:
   sonarcloud.organization: 'kevinduran09'
