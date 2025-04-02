@@ -30,5 +30,9 @@ steps:
   displayName: 'Ejecutar análisis'
 
 # Paso 3: Publicar resultados en SonarCloud
-- task: SonarCloudAnalyze@1
-- task: SonarCloudPublish@1
+- task: SonarCloudPublish@3
+  inputs:
+    pollingTimeoutSec: '300'
+- task: SonarCloudAnalyze@3
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
