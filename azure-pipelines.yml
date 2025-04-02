@@ -1,19 +1,31 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'ubuntu-latest'
+
+variables:
+  sonarcloud.organization: 'kevinduran09' 
+  sonarcloud.projectKey: 'Kevinduran09_Repositorio-Proyecto-Frumusa'       
+  SONAR_TOKEN: $(SONAR_TOKEN)  # Referencia a la variable secreta
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    dotnet tool install --global dotnet-sonarscanner
+  displayName: "Instalar SonarScanner (solo para .NET)"
+  # Si usas JS/CSS, omite este paso y usa el siguiente.
+
+- task: SonarCloudPrepare@1
+  inputs:
+    sonarCloudToken: '$(SONAR_TOKEN)'  # Usa la variable secreta aquí
+    organization: '$(sonarcloud.organization)'
+    scannerMode: 'CLI'
+    projectKey: '$(sonarcloud.projectKey)'
+    extraProperties: |
+      sonar.sources=./
+
+- script: echo "Análisis estático (no hay compilación)"  # Opcional para JS/CSS
+
+- task: SonarCloudAnalyze@1
+
+- task: SonarCloudPublish@1
