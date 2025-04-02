@@ -5,27 +5,30 @@ pool:
   vmImage: 'ubuntu-latest'
 
 variables:
-  sonarcloud.organization: 'kevinduran09' 
-  sonarcloud.projectKey: 'Kevinduran09_Repositorio-Proyecto-Frumusa'       
-  SONAR_TOKEN: $(SONAR_TOKEN)  # Referencia a la variable secreta
+  sonarcloud.organization: 'kevinduran09'
+  sonarcloud.projectKey: 'Kevinduran09_Repositorio-Proyecto-Frumusa'
+  SONAR_TOKEN: $(SONAR_TOKEN)  # Variable secreta definida en Azure DevOps
 
 steps:
-- script: |
-    dotnet tool install --global dotnet-sonarscanner
-  displayName: "Instalar SonarScanner (solo para .NET)"
-  # Si usas JS/CSS, omite este paso y usa el siguiente.
-
+# Paso 1: Configurar el análisis (no requiere Java ni instalación manual)
 - task: SonarCloudPrepare@1
   inputs:
-    sonarCloudToken: '$(SONAR_TOKEN)'  # Usa la variable secreta aquí
+    sonarCloudToken: '$(SONAR_TOKEN)'
     organization: '$(sonarcloud.organization)'
     scannerMode: 'CLI'
     projectKey: '$(sonarcloud.projectKey)'
     extraProperties: |
       sonar.sources=./
+      sonar.exclusions=**/*.sql  # Opcional: excluir archivos SQL
+      sonar.javascript.environments=chrome,node  # Config específica para JS
+      sonar.css.file.suffixes=.css,.scss,.less  # Config para CSS
 
-- script: echo "Análisis estático (no hay compilación)"  # Opcional para JS/CSS
+# Paso 2: Ejecutar análisis estático (sin compilación)
+- script: |
+    echo "Analizando archivos JS/CSS..."
+    # No necesitas comandos de build para JS/CSS estáticos
+  displayName: 'Ejecutar análisis'
 
+# Paso 3: Publicar resultados en SonarCloud
 - task: SonarCloudAnalyze@1
-
 - task: SonarCloudPublish@1
